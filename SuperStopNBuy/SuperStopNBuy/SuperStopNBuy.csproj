@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52C99C87-1090-499C-A365-CC4A06437CA8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SuperStopNBuy</RootNamespace>
+    <AssemblyName>SuperStopNBuy</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dropbox.Api, Version=4.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.4.8.0\lib\net45\Dropbox.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManagerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManagerAdd.Designer.cs">
+      <DependentUpon>AdminManagerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManagerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManagerEdit.Designer.cs">
+      <DependentUpon>AdminManagerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoMain.Designer.cs">
+      <DependentUpon>DemoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropboxTools.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ManagementItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementItemAdd.Designer.cs">
+      <DependentUpon>ManagementItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementItemEdit.Designer.cs">
+      <DependentUpon>ManagementItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementItemView.Designer.cs">
+      <DependentUpon>ManagementItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementLogin.Designer.cs">
+      <DependentUpon>ManagementLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreCart.Designer.cs">
+      <DependentUpon>StoreCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreCategory.Designer.cs">
+      <DependentUpon>StoreCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreCheckOut.Designer.cs">
+      <DependentUpon>StoreCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreMain.Designer.cs">
+      <DependentUpon>StoreMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuperStopNBuyClasses\ItemClass.cs" />
+    <Compile Include="SuperStopNBuyClasses\ManagerClass.cs" />
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagerAdd.resx">
+      <DependentUpon>AdminManagerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagerEdit.resx">
+      <DependentUpon>AdminManagerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoMain.resx">
+      <DependentUpon>DemoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementItemAdd.resx">
+      <DependentUpon>ManagementItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementItemEdit.resx">
+      <DependentUpon>ManagementItemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementItemView.resx">
+      <DependentUpon>ManagementItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementLogin.resx">
+      <DependentUpon>ManagementLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StoreCart.resx">
+      <DependentUpon>StoreCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreCategory.resx">
+      <DependentUpon>StoreCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreCheckOut.resx">
+      <DependentUpon>StoreCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreMain.resx">
+      <DependentUpon>StoreMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="Logo.ico" />
+    <None Include="images\cart.png" />
+    <None Include="images\mainBackground.png" />
+    <None Include="images\demoBackground.png" />
+    <None Include="images\manageAppBackground.png" />
+    <None Include="images\managementBackground.png" />
+    <None Include="images\adminBackground.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
